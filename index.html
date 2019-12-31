@@ -1,18 +1,19 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<head>
+    <title>WebGL Demo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../webgl.css" type="text/css">
+</head>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<body>
+    <canvas id="glcanvas" width="640" height="480"></canvas>
+</body>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+<script src="./gl-matrix.js">
+</script>
+<script src="./main.js">
+</script>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+</html>
